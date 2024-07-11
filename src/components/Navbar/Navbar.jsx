@@ -17,4 +17,4 @@ const Navbar = ({ categories, title}) => {
     )
 }
 
-export default Navbar
+export default Navbar;
