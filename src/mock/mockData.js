@@ -1,0 +1,1 @@
+export const categories = ["normal", "electric", "fire", "water", "grass"];

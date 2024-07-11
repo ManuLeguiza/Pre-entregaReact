@@ -1,15 +1,15 @@
-import './App.css'
-import Navbar from "./components/Navbar.jsx";
+import "./App.css"
+import Navbar from "./components/Navbar/Navbar.jsx"
+import { categories } from "./mock/mockData.js"
+import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx'
 
 function App() {
   const title = "HOTD DRAGONS"
 
   return (
     <>
-    <Navbar/>
-  <div>
-    <h1>Titulo {title}</h1>
-    </div>
+    <Navbar categories={categories} title= "LOGO"/>
+  <ItemListContainer title={title}/>
     </>
   );
 }
