@@ -1,1 +1,1 @@
-export const categories = ["normal", "electric", "fire", "water", "grass"];
+export const categories = ["Vhagar", "Balereon", "Drogon", "Bruma", "Viserion"];

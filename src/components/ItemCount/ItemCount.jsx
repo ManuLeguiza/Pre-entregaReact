@@ -1,14 +1,23 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react"
 
-const ItemCount = () => {
-    const [qty, setQty] = useState(1)
+const ItemCount = ({stock, initial}) => {
+    const [qty, setQty] = useState(initial)
    
     
     const HandleClickMenos = () => {
+        if (qty === 1){
+            alert("No se puede seleccionar menos de un producto")
+            return
+        }
         setQty(qty - 1)
         console.log(qty)
     }
     const HandleClickMas = () => {
+        if (qty === stock){
+            alert("No hay mas stock")
+            return
+        }
         setQty(qty + 1)
         console.log(qty)
     }

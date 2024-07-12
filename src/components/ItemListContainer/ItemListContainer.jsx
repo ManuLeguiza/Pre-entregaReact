@@ -8,7 +8,7 @@ return (
     <>
     <div>{title}</div>
     <ItemList/>
-    <ItemCount/>
+    <ItemCount stock={10} initial={1}/>
     </>
 )
 }
