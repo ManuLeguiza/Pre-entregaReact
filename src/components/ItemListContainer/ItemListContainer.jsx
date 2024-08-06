@@ -1,14 +1,40 @@
 /* eslint-disable react/prop-types */
-// eslint-disable-next-line no-unused-vars
-import ItemCount from "../ItemCount/ItemCount"
+/* eslint-disable no-undef */
+
+
+import { useState} from "react"
 import ItemList from "../ItemList/ItemList"
+import styles from "./ItemListContainer.module.scss"
+import { getProducts } from "../../utils/fetchData"
 
 const ItemListContainer = ({ title }) => {
+    const [products, setProducts] =useState([])
+
+    useEffect(() => {
+        console.log("se esta montando el componente")
+        getProducts()
+            .then((res) => {
+            console.log("se ejecuto la promesa")
+            setProducts(res)
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+    .finally(() => {
+        console.log("Finalizo la promesa")
+    })
+    },[])
+
+    
 return (
     <>
+    <div className={styles.container}> 
     <div>{title}</div>
-    <ItemList/>
-    <ItemCount stock={10} initial={1}/>
+    <ItemList products={products}/>
+    </div>
+    <button>Set Cat - grass</button>
+    <button>Set Cat - fire</button>
+
     </>
 )
 }

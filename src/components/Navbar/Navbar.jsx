@@ -2,11 +2,26 @@
 
 // eslint-disable-next-line react/prop-types
 import CartWidget from "../CartWidget/CartWidget";
+import "./Navbar.scss";
+import NavbarLink from "./NavbarLink";
 
 const Navbar = ({ categories, title}) => {
     return(
         <>
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <div>
+          <h1>{title}</h1>
+        </div>
+        <nav className="navItems">
+          {categories.map((element, index) => {
+            console.log ("recorriendo la posicion ${index} del array")
+            return <NavbarLink key={index} category={element} />
+          })}
+
+        </nav>
+        <CartWidget/> 
+
+
+        {/* <nav className="navbar navbar-expand-lg bg-body-tertiary">
   <div className="container-fluid">
     <a className="navbar-brand" href="#">{title}</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,20 +47,9 @@ const Navbar = ({ categories, title}) => {
       </ul>
     </div>
   </div>
-</nav>
-<CartWidget/> 
+  
+</nav> */}
 
-        {/* <div>
-            <h1>{title}</h1>
-        </div>
-        <div>
-        <a href="#"> {categories[0]}</a>
-        <a href="#"> {categories[1]}</a>
-        <a href="#"> {categories[2]}</a>
-        <a href="#"> {categories[3]}</a>
-        <a href="#"> {categories[4]}</a>
-        </div>
-        <CartWidget/> */}
         </>
     )
 }
