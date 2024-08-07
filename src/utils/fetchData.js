@@ -1,10 +1,13 @@
 import { items } from "../mock/mockData"
 
-export const getProducts = () => {
+export const getProducts = (category) => {
+    const filteredItems = items.filter((item) =>
+    item.category.includes(category)
+)
     return new Promise ((resolve, reject) => {
         if (items.length > 0) {
             setTimeout(() => {
-                resolve(items)
+                resolve(filteredItems)
 
             }, 2000 )
             
