@@ -4,11 +4,13 @@
 import CartWidget from "../CartWidget/CartWidget";
 import "./Navbar.scss";
 import NavbarLink from "./NavbarLink";
+import logo from "../../assets/logotargaryan.jpeg"
 
 const Navbar = ({ categories, title}) => {
     return(
         <>
-        <div>
+        <div className="Logoprincipal">
+          <img src={logo} alt="logo targaryan" />
           <h1>{title}</h1>
         </div>
         <nav className="navItems">

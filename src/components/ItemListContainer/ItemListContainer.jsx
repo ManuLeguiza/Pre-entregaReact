@@ -33,7 +33,7 @@ const ItemListContainer = ({ title }) => {
 return (
     <>
     <div className={styles.container}> 
-    <div>{title}</div>
+    
     <ItemList products={products}/>
     </div>
     <button onClick={()=> setCat("Gigantes")}>Set Cat - Gigantes</button>

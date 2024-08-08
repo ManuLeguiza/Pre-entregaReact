@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <Navbar categories={categories} title="LOGO" />
+      <Navbar categories={categories} title="HOTD DRAGONS" />
       <ItemListContainer title={title} />
     </>
   );
