@@ -5,8 +5,9 @@ import CartWidget from "../CartWidget/CartWidget";
 import "./Navbar.scss";
 import NavbarLink from "./NavbarLink";
 import logo from "../../assets/logotargaryan.jpeg"
+import { categories } from "../../mock/mockData.js";
 
-const Navbar = ({ categories, title}) => {
+const Navbar = ({ title}) => {
     return(
         <>
         <div className="Logoprincipal">
