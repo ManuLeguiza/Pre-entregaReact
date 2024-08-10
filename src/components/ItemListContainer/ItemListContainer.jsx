@@ -7,6 +7,7 @@ import ItemList from "../ItemList/ItemList"
 import styles from "./ItemListContainer.module.scss"
 import { getProducts } from "../../utils/fetchData"
 
+// eslint-disable-next-line no-unused-vars
 const ItemListContainer = ({ title }) => {
     const [products, setProducts] = useState([])
     // eslint-disable-next-line no-unused-vars
@@ -31,7 +32,7 @@ const ItemListContainer = ({ title }) => {
 
     
 return (
-    <>
+    <main>
     <div className={styles.container}> 
     
     <ItemList products={products}/>
@@ -41,7 +42,7 @@ return (
     <button onClick={()=> setCat("Jovenes")}>Set Cat - Jovenes</button>
     <button onClick={()=> setCat("Grandes")}>Set Cat - Grandes</button>
 
-    </>
+    </main>
 )
 }
 

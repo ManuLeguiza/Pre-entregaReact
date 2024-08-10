@@ -14,16 +14,21 @@
         align-self: center;
     }
 }
+.navItem {
+    cursor: pointer;
+    text-decoration: none;
+    color: red;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 .navItems {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    text-decoration: none;
-    color: red;
     width: 100%;
     padding: 0 20px;
-    font-size: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
 }
-
+active{
+    color: blue;
+}

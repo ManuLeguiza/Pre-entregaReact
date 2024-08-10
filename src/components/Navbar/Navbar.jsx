@@ -9,18 +9,18 @@ import { categories } from "../../mock/mockData.js";
 
 const Navbar = ({ title}) => {
     return(
-        <>
+        <nav>
         <div className="Logoprincipal">
           <img src={logo} alt="logo targaryan" />
           <h1>{title}</h1>
         </div>
-        <nav className="navItems">
+        <div className="navItems">
           {categories.map((element, index) => {
             console.log ("recorriendo la posicion ${index} del array")
             return <NavbarLink key={index} category={element} />
           })}
 
-        </nav>
+        </div>
         <CartWidget/> 
 
 
@@ -53,7 +53,7 @@ const Navbar = ({ title}) => {
   
 </nav> */}
 
-        </>
+        </nav>
     )
 }
 

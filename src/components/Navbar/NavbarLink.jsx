@@ -1,9 +1,12 @@
 /* eslint-disable react/prop-types */
+// eslint-disable-next-line no-unused-vars
+import {NavLink} from "react-router-dom"
+
 const NavbarLink = ({ category }) => {
     return (
-        <a href="#" className="navItems">
+        <NavLink to={`/${category}`} className="navItem">
             {category}
-        </a>
+        </NavLink>
     )
 }
 

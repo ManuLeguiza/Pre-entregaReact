@@ -1,4 +1,4 @@
-export const categories = ["Gigantes", "Grandes", "Medianos", "Jovenes", "Salvajes"];
+export const categories = [ "Home","About", "Contact", "Gigantes", "Grandes", "Medianos", "Jovenes", "Salvajes"];
 export const items = [
     {
         id:1,
@@ -8,7 +8,7 @@ export const items = [
         price: 300000,
         stock:10,
         category: ["Gigantes"],
-        image: "https://static.wikia.nocookie.net/gameofthrones/images/2/2c/Vhagar_Official_Guide.jpg/revision/latest/scale-to-width-down/176?cb=20220926040425",
+        image: "https://res.cloudinary.com/dchge4m3p/image/upload/v1723308808/c9fqw68hampyfepmtiqd.webp",
     },
     {
         id:2,
@@ -18,7 +18,7 @@ export const items = [
         price: 500000,
         stock:1,
         category: ["Gigantes"],
-        image: "https://static.wikia.nocookie.net/hieloyfuego/images/1/1d/Aegon_I_Targaryen_en_Balerion_by_Jordi_Gonz%C3%A1lez%C2%A9.jpg/revision/latest/scale-to-width-down/1000?cb=20150213204351",
+        image: "https://res.cloudinary.com/dchge4m3p/image/upload/v1723308807/xorr7v54nv4v7wfqkdu1.webp",
     },
     {
         id:3,
@@ -28,7 +28,7 @@ export const items = [
         price: 250000,
         stock:20,
         category: ["Gigantes"],
-        image: "https://static.wikia.nocookie.net/gameofthrones/images/d/d0/Vermithor_Official_Guide.jpg/revision/latest/scale-to-width-down/155?cb=20221024025007",
+        image: "https://res.cloudinary.com/dchge4m3p/image/upload/v1723308808/hlyk4wkosqx0ynzxql0n.webp",
     },
     {
         id:4,
@@ -38,7 +38,7 @@ export const items = [
         price: 150000,
         stock:60,
         category: ["Grandes"],
-        image: "https://static.wikia.nocookie.net/gameofthrones/images/8/8f/DrogonWinterfell8x01.PNG/revision/latest?cb=20190515233534",
+        image: "https://res.cloudinary.com/dchge4m3p/image/upload/v1723308807/tfyjpbxzxovezuraciwj.webp",
     },
     {
         id:5,
@@ -48,7 +48,7 @@ export const items = [
         price: 180000,
         stock:40,
         category: ["Grandes"],
-        image: "https://cl2.buscafs.com/www.tomatazos.com/public/uploads/images/445990/445990.jpg",
+        image: "https://res.cloudinary.com/dchge4m3p/image/upload/v1723308807/vgkrwkhy4fvpippqdbv4.webp",
     },
     {
         id:6,
@@ -58,7 +58,7 @@ export const items = [
         price: 160000,
         stock:36,
         category: ["Grandes"],
-        image: "https://static.wikia.nocookie.net/gameofthrones/images/3/3f/Meleys_Official_Guide_2.jpg/revision/latest/scale-to-width-down/155?cb=20221024025038",
+        image: "https://res.cloudinary.com/dchge4m3p/image/upload/v1723308807/gco47kftlydj8ddp3g6e.webp",
     }, 
     {
         id:7,
@@ -68,7 +68,7 @@ export const items = [
         price: 115000,
         stock:200,
         category: ["Medianos"],
-        image: "https://static.wikia.nocookie.net/gameofthrones/images/5/54/RhaegalPostFlight.PNG/revision/latest?cb=20190415050236",
+        image: "https://res.cloudinary.com/dchge4m3p/image/upload/v1723308807/l2dpfbxubc0jdxmgqgl9.webp",
     }, 
     {
         id:8,
@@ -78,7 +78,7 @@ export const items = [
         price: 125000,
         stock:100,
         category: ["Medianos"],
-        image: "https://static.wikia.nocookie.net/gameofthrones/images/0/0e/Caraxes_Official_Guide.png/revision/latest/scale-to-width-down/198?cb=20220827175516",
+        image: "https://res.cloudinary.com/dchge4m3p/image/upload/v1723308806/tlynbjw3jscvc996gehq.webp",
     },
     {
         id:9,
@@ -88,7 +88,7 @@ export const items = [
         price: 100000,
         stock:150,
         category: ["Medianos"],
-        image: "https://static.wikia.nocookie.net/gameofthrones/images/d/d5/Seasmoke-206.png/revision/latest/scale-to-width-down/173?cb=20240722130627",
+        image: "https://res.cloudinary.com/dchge4m3p/image/upload/v1723308808/cajbgsyduyqopds6eh9k.webp",
     },
     {
         id:10,
@@ -98,7 +98,7 @@ export const items = [
         price: 100000,
         stock:200,
         category: ["Medianos"],
-        image: "https://static.wikia.nocookie.net/gameofthrones/images/6/61/Syrax_Official_Guide.jpg/revision/latest/scale-to-width-down/155?cb=20220823013707",
+        image: "https://res.cloudinary.com/dchge4m3p/image/upload/v1723308807/rkzkexujuklfcxs8cgfn.webp",
     },
     {
         id:11,
@@ -108,7 +108,7 @@ export const items = [
         price: 90000,
         stock:1000,
         category: ["Medianos"],
-        image: "https://static.wikia.nocookie.net/gameofthrones/images/5/53/Sunfyre_2x4.png/revision/latest/scale-to-width-down/155?cb=20240709233422",
+        image: "https://res.cloudinary.com/dchge4m3p/image/upload/v1723308807/f5adnyd2sv0f7hoginsq.webp",
     },
     {
         id:12,
@@ -118,7 +118,7 @@ export const items = [
         price: 75000,
         stock:1000,
         category: ["Medianos"],
-        image: "https://static.wikia.nocookie.net/gameofthrones/images/1/1d/2x7_Silverwing_Infobox.png/revision/latest/scale-to-width-down/165?cb=20240729075950",
+        image: "https://res.cloudinary.com/dchge4m3p/image/upload/v1723308807/tnuq6n0s17pnat0axafs.webp",
     },
     {
         id:13,
@@ -128,7 +128,7 @@ export const items = [
         price: 50000,
         stock:1000,
         category: ["Jovenes"],
-        image: "https://static.wikia.nocookie.net/gameofthrones/images/4/48/Moondancer.png/revision/latest/scale-to-width-down/367?cb=20240409081803",
+        image: "https://res.cloudinary.com/dchge4m3p/image/upload/v1723308807/z7qmleunys7nkhiamzsm.webp",
     },
     {
         id:14,
@@ -138,7 +138,7 @@ export const items = [
         price: 10000,
         stock:10000,
         category: ["Jovenes"],
-        image: "https://static.wikia.nocookie.net/gameofthrones/images/3/3a/Vermax_Official_Guide_2.jpg/revision/latest/scale-to-width-down/155?cb=20221001085116",
+        image: "https://res.cloudinary.com/dchge4m3p/image/upload/v1723308808/jjktu0z0mhvuqgyki5xv.webp",
     },
     {
         id:15,
@@ -148,7 +148,7 @@ export const items = [
         price: 10000,
         stock:10000,
         category: ["Jovenes"],
-        image: "https://static.wikia.nocookie.net/gameofthrones/images/0/05/The_Blue_Queen.png/revision/latest/scale-to-width-down/283?cb=20240806075703",
+        image: "https://res.cloudinary.com/dchge4m3p/image/upload/v1723308808/dxyh8ydvqifp6uydxffg.webp",
     },
     {
         id:16,
@@ -158,6 +158,6 @@ export const items = [
         price: 1000,
         stock:1,
         category: ["Salvajes"],
-        image: "https://static.wikia.nocookie.net/gameofthrones/images/f/ff/2x8_Sheepstealer.png/revision/latest/scale-to-width-down/251?cb=20240806080945",
+        image: "https://res.cloudinary.com/dchge4m3p/image/upload/v1723308807/awdhqnuzjs6xt1exqwh3.webp",
     },
 ]
