@@ -6,12 +6,15 @@ import "./Navbar.scss";
 import NavbarLink from "./NavbarLink";
 import logo from "../../assets/logotargaryan.jpeg"
 import { categories } from "../../mock/mockData.js";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ title}) => {
     return(
         <nav>
         <div className="Logoprincipal">
+          <Link to="/">
           <img src={logo} alt="logo targaryan" />
+          </Link>
           <h1>{title}</h1>
         </div>
         <div className="navItems">

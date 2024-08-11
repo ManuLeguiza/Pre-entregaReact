@@ -38,10 +38,10 @@ return (
     <div className={styles.container}> 
         <ItemList products={products}/>
     </div>
-    <button onClick={()=> setCat("Gigantes")}>Set Cat - Gigantes</button>
+    {/* <button onClick={()=> setCat("Gigantes")}>Set Cat - Gigantes</button>
     <button onClick={()=> setCat("Medianos")}>Set Cat - Medianos</button>
     <button onClick={()=> setCat("Jovenes")}>Set Cat - Jovenes</button>
-    <button onClick={()=> setCat("Grandes")}>Set Cat - Grandes</button>
+    <button onClick={()=> setCat("Grandes")}>Set Cat - Grandes</button> */}
 
     </main>
 )
