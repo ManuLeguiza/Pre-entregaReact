@@ -6,9 +6,7 @@ import styles from "./ItemList.module.scss"
 const ItemList = ({products}) => {
   return (
     <>
-    <div className={styles.container}>
-    
-    
+    <div className={`${styles.container} d-flex`}>
     {products.map((product) => {
       return <Item key={product.id} product={product}></Item>
 })}

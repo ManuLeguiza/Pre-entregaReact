@@ -6,17 +6,19 @@ import { useState, useEffect} from "react"
 import ItemList from "../ItemList/ItemList"
 import styles from "./ItemListContainer.module.scss"
 import { getProducts } from "../../utils/fetchData"
+import { useParams } from "react-router-dom"
 
 // eslint-disable-next-line no-unused-vars
 const ItemListContainer = ({ title }) => {
     const [products, setProducts] = useState([])
     // eslint-disable-next-line no-unused-vars
-    const [cat, setCat] = useState ("Grandes")
+    // const [cat, setCat] = useState ("Grandes")
+    const {categoryId} = useParams ()
     
 
     useEffect(() => {
         console.log("se esta montando el componente")
-        getProducts(cat)
+        getProducts(categoryId)
             .then((res) => {
             console.log("se ejecuto la promesa")
             setProducts(res)
@@ -28,14 +30,13 @@ const ItemListContainer = ({ title }) => {
     .finally(() => {
         console.log("Finalizo la promesa")
     })
-    },[cat])
+    },[categoryId])
 
     
 return (
     <main>
     <div className={styles.container}> 
-    
-    <ItemList products={products}/>
+        <ItemList products={products}/>
     </div>
     <button onClick={()=> setCat("Gigantes")}>Set Cat - Gigantes</button>
     <button onClick={()=> setCat("Medianos")}>Set Cat - Medianos</button>
