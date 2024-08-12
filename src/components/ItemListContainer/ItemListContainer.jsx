@@ -7,17 +7,18 @@ import ItemList from "../ItemList/ItemList"
 import styles from "./ItemListContainer.module.scss"
 import { getProducts } from "../../utils/fetchData"
 import { useParams } from "react-router-dom"
+import { Spinner } from "../Spinner/Spinner"
 
-// eslint-disable-next-line no-unused-vars
+
 const ItemListContainer = ({ title }) => {
     const [products, setProducts] = useState([])
-    // eslint-disable-next-line no-unused-vars
-    // const [cat, setCat] = useState ("Grandes")
     const {categoryId} = useParams ()
+    const [loading, setLoading] = useState(true)
     
 
     useEffect(() => {
         console.log("se esta montando el componente")
+        setLoading(true)
         getProducts(categoryId)
             .then((res) => {
             console.log("se ejecuto la promesa")
@@ -29,20 +30,23 @@ const ItemListContainer = ({ title }) => {
     })
     .finally(() => {
         console.log("Finalizo la promesa")
+        setLoading(false)
     })
+    return () => {
+        console.log("se desmonto el componente")
+    }
     },[categoryId])
 
     
 return (
     <main>
-    <div className={styles.container}> 
-        <ItemList products={products}/>
-    </div>
-    {/* <button onClick={()=> setCat("Gigantes")}>Set Cat - Gigantes</button>
-    <button onClick={()=> setCat("Medianos")}>Set Cat - Medianos</button>
-    <button onClick={()=> setCat("Jovenes")}>Set Cat - Jovenes</button>
-    <button onClick={()=> setCat("Grandes")}>Set Cat - Grandes</button> */}
-
+        {console.log("renderizo el componente")}
+        <div className={styles.container}> 
+            <div>{title}</div>
+             { loading
+                ? <Spinner/>
+                : <ItemList products={products}/> }    
+        </div> 
     </main>
 )
 }

@@ -1,4 +1,4 @@
-export const categories = [ "Home","About", "Contact", "Gigantes", "Grandes", "Medianos", "Jovenes", "Salvajes"];
+export const categories = ["Gigantes", "Grandes", "Medianos", "Jovenes", "Salvajes"]
 export const items = [
     {
         id:1,
