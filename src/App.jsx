@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import CartContextProvider from "./context/CartContext.jsx"
 import "./App.css"
 import AboutUs from "./components/AboutUs/AboutUs.jsx"
 import Contact from "./components/Contact/Contact.jsx"
@@ -11,7 +12,7 @@ function App() {
   const title = "HOTD DRAGONS"
 
   return (
-    <>
+    <CartContextProvider>
     <BrowserRouter>
       <Layout>
         <Routes>
@@ -24,7 +25,7 @@ function App() {
         </Routes>
       </Layout>
     </BrowserRouter>
-    </>
+    </CartContextProvider>
     
   )
 }

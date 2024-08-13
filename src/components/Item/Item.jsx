@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 const Item = ({product}) => {
   product.isStar = true
   return (
-      <Card style={{width: "9rem"}} className="m-2">
+      <Card style={{width: "300px", height: "500px"}} className="m-2">
         <Card.Img variant="top" src={product.image} />
         <Card.Body>
           <Card.Title>{product.name}</Card.Title>

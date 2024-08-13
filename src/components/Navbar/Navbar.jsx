@@ -8,23 +8,22 @@ import logo from "../../assets/logotargaryan.jpeg"
 import { categories } from "../../mock/mockData.js"
 import { Link } from "react-router-dom"
 
-const Navbar = ({ title}) => {
+const Navbar = ({ title }) => {
     return(
         <nav>
-        <div className="Logoprincipal">
-          <Link to="/">
-          <img src={logo} alt="logo targaryan" />
-          </Link>
-          <h1>{title}</h1>
-        </div>
-        <div className="navItems">
-          {categories.map((element, index) => {
-            console.log ("recorriendo la posicion ${index} del array")
-            return <NavbarLink key={index} category={element} />
-          })}
-
-        </div>
-        <CartWidget/> 
+            <div className="Logoprincipal">
+              <Link to="/">
+                <img src={logo} alt="logo targaryan" />
+              </Link>
+              <h1>{title}</h1>
+            </div>
+            <div className="navItems">
+              {categories.map((element, index) => {
+                console.log ("recorriendo la posicion ${index} del array")
+                  return <NavbarLink key={index} category={element} />
+              })}
+            </div>
+            <CartWidget/> 
         </nav>
     )
 }

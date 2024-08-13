@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-undef */
 
-
+import { useCartContext } from "../../context/CartContext"
 import { useState, useEffect} from "react"
 import ItemList from "../ItemList/ItemList"
 import styles from "./ItemListContainer.module.scss"
@@ -10,10 +10,11 @@ import { useParams } from "react-router-dom"
 import { Spinner } from "../Spinner/Spinner"
 
 
-const ItemListContainer = ({ title }) => {
+const ItemListContainer = () => {
     const [products, setProducts] = useState([])
     const {categoryId} = useParams ()
     const [loading, setLoading] = useState(true)
+    const {titulo} = useCartContext()
     
 
     useEffect(() => {
@@ -42,7 +43,7 @@ return (
     <main>
         {console.log("renderizo el componente")}
         <div className={styles.container}> 
-            <div>{title}</div>
+            <div>{titulo}</div>
              { loading
                 ? <Spinner/>
                 : <ItemList products={products}/> }    

@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react"
+import Button  from "react-bootstrap/Button"
 
-const ItemCount = ({stock, initial}) => {
+const ItemCount = ({stock, initial, handleOnBuy}) => {
     const [qty, setQty] = useState(initial)
    
     
@@ -21,13 +22,20 @@ const ItemCount = ({stock, initial}) => {
         setQty(qty + 1)
         console.log(qty)
     }
+
+    const handleAddToCart = () => {
+        handleOnBuy(qty)
+    }
     return (
+        <>
         <div>
             <button onClick={HandleClickMenos}>-</button>
             <span>{qty}</span>
             <button onClick={HandleClickMas}>+</button>
             <h1>Item Count</h1>
         </div>
+        <Button variant="primary" onClick={handleAddToCart}>Add to cart</Button>
+        </>
     )
 }
 
