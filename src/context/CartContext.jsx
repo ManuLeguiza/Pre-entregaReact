@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import {useState, useEffect, createContext, useContext} from "react"
@@ -19,7 +20,7 @@ const CartContextProvider = ({children}) => {
         const localCart = JSON.parse(localStorage.getItem("cart"))
         const localTotal = JSON.parse(localStorage.getItem("total"))
         const localQty = JSON.parse(localStorage.getItem("qty"))
-        
+
         if (localCart && localTotal && localQty) {
             setCart(localCart)
             setTotal(localTotal)
@@ -52,6 +53,25 @@ const CartContextProvider = ({children}) => {
         localStorage.setItem("cart", JSON.stringify(newCart))
         localStorage.setItem("total", JSON.stringify(total))
         localStorage.setItem("qty", JSON.stringify(qty))
+    }
+
+    const removeItem = (id, price, qty) => {
+        setTotal(total - price * qty)
+        setQtyItems(qtyItems - qty)
+
+        const newCart = cart.filter((elem) => elem.id !== id)
+
+        setCart(newCart)
+        localStorage.setItem("cart", JSON.stringify(newCart))
+        localStorage.setItem("total", JSON.stringify(total))
+        localStorage.setItem("qty", JSON.stringify(qty))
+    }
+    const clearCart = () => {
+        setCart([])
+        setTotal(0)
+        setQtyItems(0)
+        localStorage.removeItem("cart")
+        localStorage.removeItem("total")
     }
 
     const contextValue = {

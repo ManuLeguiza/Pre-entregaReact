@@ -7,6 +7,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx'
 import Layout from "./pages/Layout.jsx"
 import Error404 from "./components/Error404/Error404.jsx"
+import Cart from "./components/Cart/Cart.jsx"
 
 function App() {
   const title = "HOTD DRAGONS"
@@ -21,6 +22,7 @@ function App() {
           <Route path="/product/:id" element={<ItemDetailContainer/>}/>
           <Route path="/about" element={<AboutUs/>}/>
           <Route path="/contact" element={<Contact/>}/>
+          <Route path="/cart" element={<Cart/>}/>
           <Route path="*" element={<Error404/>}/>
         </Routes>
       </Layout>

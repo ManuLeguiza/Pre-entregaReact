@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react"
 import Button  from "react-bootstrap/Button"
+import { useNavigate } from "react-router-dom"
 
 const ItemCount = ({stock, initial, handleOnBuy}) => {
+    const navigate = useNavigate()
     const [qty, setQty] = useState(initial)
-   
+    const [itemAdded, setItemAdded] = useState(false)
     
     const HandleClickMenos = () => {
         if (qty === 1){
@@ -25,16 +27,26 @@ const ItemCount = ({stock, initial, handleOnBuy}) => {
 
     const handleAddToCart = () => {
         handleOnBuy(qty)
+        setItemAdded(true)
+    }
+    const handleGoToCheckout = () => {
+        navigate("/cart")
+        setItemAdded(false)
     }
     return (
         <>
-        <div>
-            <button onClick={HandleClickMenos}>-</button>
-            <span>{qty}</span>
-            <button onClick={HandleClickMas}>+</button>
-            <h1>Item Count</h1>
-        </div>
-        <Button variant="primary" onClick={handleAddToCart}>Add to cart</Button>
+        {itemAdded ? (
+            <Button variant="primary" onClick={handleGoToCheckout}>Checkout</Button>
+        ) : (
+            <>
+            <div>
+                  <button onClick={HandleClickMenos}>-</button>
+                  <span>{qty}</span>
+                  <button onClick={HandleClickMas}>+</button>
+            </div>
+            <Button variant="primary" onClick={handleAddToCart}>Add to cart</Button>
+            </>
+        )}
         </>
     )
 }
