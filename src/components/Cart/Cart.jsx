@@ -1,5 +1,5 @@
 import { useCartContext } from "../../context/CartContext"
-import { Table } from "react-bootstrap/Table"
+import Table  from "react-bootstrap/Table"
 
 const Cart = () => {
     const {cart, total, removeItem, clearCart} = useCartContext()
@@ -22,7 +22,7 @@ const Cart = () => {
         </tr>
       </thead>
       <tbody>
-        {cart?.map(({id, name, price, qty}, index) => {
+        {cart && cart.map(({id, name, price, qty}, index) => {
             return(
                 <tr key={index}>
                 <td>{id}</td>

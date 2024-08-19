@@ -3,11 +3,13 @@
 
 import { useCartContext } from "../../context/CartContext"
 import { useState, useEffect} from "react"
+import { db } from "../../firebase/dbConnection"
+import {collection, getDocs, query, where} from "firebase/firestone"
 import ItemList from "../ItemList/ItemList"
 import styles from "./ItemListContainer.module.scss"
-import { getProducts } from "../../utils/fetchData"
 import { useParams } from "react-router-dom"
 import { Spinner } from "../Spinner/Spinner"
+import { query } from "firebase/firestore"
 
 
 const ItemListContainer = () => {
@@ -18,24 +20,24 @@ const ItemListContainer = () => {
     
 
     useEffect(() => {
-        console.log("se esta montando el componente")
         setLoading(true)
-        getProducts(categoryId)
-            .then((res) => {
-            console.log("se ejecuto la promesa")
-            setProducts(res)
-            console.log("se actualizaron los productos")
-    })
-    .catch((err) => {
-        console.log(err)
-    })
-    .finally(() => {
-        console.log("Finalizo la promesa")
-        setLoading(false)
-    })
-    return () => {
-        console.log("se desmonto el componente")
-    }
+        let productsCollection = collection(db, "productos")
+
+        if(categoryId){
+            productsCollection= query(productsCollection, where("category", "array-contains", categoryId))}
+
+            getDocs(productsCollection)
+            .then(({docs}) => {
+             const prodFromDocs = docs.map((doc)=>({
+                  id: doc.id,
+               ...doc.data()
+            }))
+            setProducts(prodFromDocs)
+            setLoading(false)
+            })
+            .catch((error) => {
+                console.error("Error getting documents:", error)
+            })               
     },[categoryId])
 
     
