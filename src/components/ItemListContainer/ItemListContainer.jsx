@@ -4,12 +4,12 @@
 import { useCartContext } from "../../context/CartContext"
 import { useState, useEffect} from "react"
 import { db } from "../../firebase/dbConnection"
-import {collection, getDocs, query, where} from "firebase/firestone"
+import { collection, getDocs, query, where} from "firebase/firestore"
 import ItemList from "../ItemList/ItemList"
 import styles from "./ItemListContainer.module.scss"
 import { useParams } from "react-router-dom"
 import { Spinner } from "../Spinner/Spinner"
-import { query } from "firebase/firestore"
+
 
 
 const ItemListContainer = () => {
