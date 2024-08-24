@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import { useCartContext } from "../../context/CartContext"
-import Table  from "react-bootstrap/Table"
+import Table from "react-bootstrap/Table"
 import { useState } from "react"
 import { collection } from "firebase/firestore"
 import { db } from "../../firebase/dbConnection"
