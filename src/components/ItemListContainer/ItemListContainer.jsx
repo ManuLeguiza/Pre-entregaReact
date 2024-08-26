@@ -45,7 +45,10 @@ return (
     <main>
         {console.log("renderizo el componente")}
         <div className={styles.container}> 
-            <div>{titulo}</div>
+            <div>
+                {titulo}
+                <h1>Bienvenidos a HOTD DRAGONS la mejor tienda online para comprar dragones reales</h1>
+            </div>
              { loading
                 ? <Spinner/>
                 : <ItemList products={products}/> }    
