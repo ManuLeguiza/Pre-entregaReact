@@ -36,7 +36,7 @@ const ItemCount = ({stock, initial, handleOnBuy}) => {
     return (
         <>
         {itemAdded ? (
-            <Button variant="primary" onClick={handleGoToCheckout}>Checkout</Button>
+            <Button variant="warning" onClick={handleGoToCheckout}>Checkout</Button>
         ) : (
             <>
             <div>
@@ -44,7 +44,7 @@ const ItemCount = ({stock, initial, handleOnBuy}) => {
                   <span>{qty}</span>
                   <button onClick={HandleClickMas}>+</button>
             </div>
-            <Button variant="primary" onClick={handleAddToCart}>Add to cart</Button>
+            <Button variant="warning" onClick={handleAddToCart}>Add to cart</Button>
             </>
         )}
         </>

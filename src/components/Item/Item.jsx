@@ -11,7 +11,7 @@ const Item = ({product}) => {
   return (
    
     <div className={styles.container}>
-      <Card style={{width: "300px",}} className="m-2">
+      <Card className="m-2">
         <Card.Img variant="top" src={product.image} className={styles.img}/>
         <Card.Body className={styles.cardBody}>
           <Card.Title className={styles.title}>{product.name}</Card.Title>

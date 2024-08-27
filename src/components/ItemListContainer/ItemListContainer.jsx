@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-undef */
 
@@ -8,7 +9,7 @@ import { collection, getDocs, query, where} from "firebase/firestore"
 import ItemList from "../ItemList/ItemList"
 import styles from "./ItemListContainer.module.scss"
 import { useParams } from "react-router-dom"
-import { Spinner } from "../Spinner/Spinner"
+import Spinner from 'react-bootstrap/Spinner'
 
 
 
@@ -46,7 +47,7 @@ return (
         {console.log("renderizo el componente")}
         <div className={styles.container}> 
             <div>
-                {titulo}
+                
                 <h1>Bienvenidos a HOTD DRAGONS la mejor tienda online para comprar dragones reales</h1>
             </div>
              { loading

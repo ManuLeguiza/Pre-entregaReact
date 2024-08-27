@@ -7,8 +7,8 @@ const ItemList = ({products}) => {
   return (
     <>
     <div className={`${styles.container} d-flex `}>
-    {products.map((product) => {
-      return <Item key={product.id} product={product}></Item>
+    {products.map((product) => { 
+      return <Item key={product.id} product={product} ></Item>  
 })}
     </div>
     </>
@@ -16,6 +16,6 @@ const ItemList = ({products}) => {
   )
 }
 
-
-
 export default ItemList
+
+{/* <div className={`${styles.container} d-flex `}> */}

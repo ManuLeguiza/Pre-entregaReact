@@ -1,6 +1,7 @@
 import { items } from "../../mock/mockData"
 import { db } from "../../firebase/dbConnection"
 import { collection, addDoc } from "firebase/firestore"
+import Button from 'react-bootstrap/Button'
 
 
 const Footer = () => {
@@ -18,7 +19,7 @@ const Footer = () => {
     }
     return (
     <footer>
-        <button onClick={addProducts}>agregar productos de datos</button>
+        <Button variant="warning" onClick={addProducts}>agregar productos de datos</Button>
     </footer>
     )
 }
